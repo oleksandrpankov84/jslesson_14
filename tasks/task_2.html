@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 14</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+	</header>
+	<main>
+		<p>Задача 2. Розробити функцію, у яку передають об’єкт (день, місяць, рік). Визначити, який буде рік через N місяців.</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			let date={
+				day: 3,
+				month: 4,
+				year: 2023
+			}
+			const userMonth=parseInt(prompt('Введіть кількість місяців'))
+			function getYear(date,userMonth) {
+				if (date.month+userMonth>12) return date.year=date.year+Math.floor((date.month+userMonth)/12)
+				else return date.year
+			}
+			document.write(getYear(date,userMonth))
+		</script>
+	</main>
+</body>
+</html>
